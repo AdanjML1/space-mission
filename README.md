@@ -49,22 +49,6 @@ Inicializar Prisma (si no existe):
 
 npx prisma init
 
-
-Crear los modelos en prisma/schema.prisma:
-
-model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  password String
-}
-
-model Astronaut {
-  id    Int    @id @default(autoincrement())
-  name  String
-  email String
-}
-
-
 Ejecutar migraciones:
 
 npx prisma migrate dev --name init
@@ -106,7 +90,6 @@ export const api = (path: string, options?: RequestInit) =>
 Ejecutar frontend:
 
 npm run dev
-
 
 Frontend corriendo en http://localhost:5173.
 
